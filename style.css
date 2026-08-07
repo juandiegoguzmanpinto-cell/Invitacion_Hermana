@@ -297,3 +297,60 @@ text-align:center;
 }
 
 }
+/* ===== DRESS CODE ===== */
+
+#dresscode{
+
+    background:#fdf9f6;
+
+    padding:100px 20px;
+
+}
+
+.dress-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.icono{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+.dress-card h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+    color:#c9a45c;
+
+}
+
+.dress-card p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
