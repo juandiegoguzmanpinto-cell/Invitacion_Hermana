@@ -1,219 +1,123 @@
-/* ===========================
-   ESTILOS GENERALES
-=========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(180deg,#faf7f2,#f8e9ef);
-    color:#2d2d2d;
-}
 
-/* ===========================
-   PORTADA
-=========================== */
+margin:0;
+font-family:Poppins,sans-serif;
+background:#fdf8fb;
+
+}
 
 .hero{
 
-    min-height:100vh;
+height:100vh;
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    align-items:center;
+align-items:center;
 
-    text-align:center;
+text-align:center;
 
-    padding:30px;
+background:linear-gradient(135deg,#fff,#ffe8f2);
 
-    background:
-    radial-gradient(circle at top,#ffffffaa,transparent),
-    linear-gradient(180deg,#faf7f2,#f6d8e5);
+padding:20px;
 
 }
 
-.hero-contenido{
+.contenido{
 
-    max-width:700px;
-
-    animation:aparecer 1.5s;
+max-width:700px;
 
 }
 
 .detalle{
 
-    color:#c9a45c;
+letter-spacing:6px;
 
-    letter-spacing:5px;
+font-size:18px;
 
-    text-transform:uppercase;
-
-    font-size:18px;
+color:#9d6b85;
 
 }
 
 h1{
 
-    font-family:'Cormorant Garamond',serif;
+font-family:"Cormorant Garamond",serif;
 
-    font-size:70px;
+font-size:70px;
 
-    margin-top:20px;
+margin:0;
+
+color:#222;
 
 }
 
 h2{
 
-    font-family:'Cormorant Garamond',serif;
+font-family:"Cormorant Garamond",serif;
 
-    font-size:40px;
+font-size:40px;
 
-    margin-bottom:20px;
+margin-top:-10px;
 
-}
-
-.linea{
-
-    width:120px;
-
-    height:2px;
-
-    background:#c9a45c;
-
-    margin:25px auto;
+color:#a85b83;
 
 }
 
-.hero p{
+.frase{
 
-    font-size:20px;
+margin-top:30px;
 
-    line-height:1.8;
+font-size:18px;
+
+line-height:35px;
+
+color:#444;
 
 }
 
 .boton{
 
-    display:inline-block;
+display:inline-block;
 
-    margin-top:40px;
+margin-top:40px;
 
-    background:#c9a45c;
+padding:16px 35px;
 
-    color:white;
+background:#d88ab2;
 
-    text-decoration:none;
+color:white;
 
-    padding:15px 40px;
+text-decoration:none;
 
-    border-radius:40px;
+border-radius:40px;
 
-    transition:.3s;
+font-weight:bold;
 
-    font-weight:600;
+transition:.3s;
 
 }
 
 .boton:hover{
 
-    transform:scale(1.05);
-
-    background:#b78d3d;
+background:#b86d92;
 
 }
 
-/* ===========================
-   CONTADOR
-=========================== */
+#evento{
+
+padding:80px 20px;
+
+text-align:center;
+
+}
 
 #contador{
 
-    padding:80px 20px;
+font-size:35px;
 
-    text-align:center;
+font-weight:bold;
 
-}
-
-#countdown{
-
-    margin-top:20px;
-
-    font-size:40px;
-
-    color:#c9a45c;
-
-    font-weight:bold;
-
-}
-
-/* ===========================
-   PRÓXIMAMENTE
-=========================== */
-
-.proximamente{
-
-    padding:100px 30px;
-
-    text-align:center;
-
-}
-
-/* ===========================
-   ANIMACIÓN
-=========================== */
-
-@keyframes aparecer{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(30px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media(max-width:768px){
-
-h1{
-
-font-size:48px;
-
-}
-
-h2{
-
-font-size:30px;
-
-}
-
-.hero p{
-
-font-size:17px;
-
-}
+margin-top:20px;
 
 }
