@@ -2,29 +2,40 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mis XV | María Alejandra Guzmán Pinto</title>
+    <title>XV Años | María Alejandra Guzmán Pinto</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<!-- SOBRE -->
-<section id="cover">
+<!-- ===================== -->
+<!-- PANTALLA DE BIENVENIDA -->
+<!-- ===================== -->
+
+<div id="cover">
 
     <div class="envelope">
 
-        <div class="seal">💮</div>
+        <div class="seal">
+            ✿
+        </div>
 
         <h2>Has recibido una invitación</h2>
+
+        <p>
+            Toca el botón para descubrir este momento tan especial.
+        </p>
 
         <button id="openBtn">
             Abrir invitación
@@ -32,10 +43,11 @@
 
     </div>
 
-</section>
+</div>
 
-<!-- INVITACIÓN -->
-<main id="invitacion">
+<!-- ===================== -->
+<!-- PORTADA -->
+<!-- ===================== -->
 
 <header class="hero">
 
@@ -55,9 +67,9 @@
 
         <div class="line"></div>
 
-        <p>
+        <p class="frase">
 
-            Hay momentos que se sueñan toda la vida...
+            Hay momentos que se sueñan toda la vida…
 
             <br><br>
 
@@ -71,7 +83,7 @@
 
         <a href="#contador" class="btn">
 
-            Descubrir Invitación
+            Descubrir invitación
 
         </a>
 
@@ -79,99 +91,250 @@
 
 </header>
 
+<!-- ===================== -->
+<!-- CONTADOR -->
+<!-- ===================== -->
+
 <section id="contador">
 
-<h2>Cuenta regresiva</h2>
+    <h2 class="titulo">
 
-<div id="countdown">
+        Cuenta regresiva
 
-00 Días
+    </h2>
 
-</div>
+    <div id="countdown">
+
+    </div>
 
 </section>
 
-<section id="itinerario">
-<section id="dresscode">
+<!-- ===================== -->
+<!-- ITINERARIO -->
+<!-- ===================== -->
 
-    <h2 class="titulo-seccion">
+<section id="itinerario">
+
+    <h2 class="titulo">
+
+        Itinerario
+
+    </h2>
+
+    <div class="evento">
+
+        <div class="hora">
+
+            18:00
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+
+                Eucaristía
+
+            </h3>
+
+            <p>
+
+                Parroquia San José de Guateque
+
+            </p>
+
+            <p>
+
+                Carrera 6 #10-48
+                Guateque, Boyacá
+
+            </p>
+
+            <a
+
+            class="btn"
+
+            target="_blank"
+
+            href="https://maps.app.goo.gl/ttdKFH2rWQof25Qk7?g_st=aw">
+
+            Cómo llegar
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="evento">
+
+        <div class="hora">
+
+            19:00
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+
+                Recepción
+
+            </h3>
+
+            <p>
+
+                Finca Villa Zue de los Sauces
+
+            </p>
+
+            <p>
+
+                Km 1 vía Rosales
+                Vereda Rosales
+
+            </p>
+
+            <a
+
+            class="btn"
+
+            target="_blank"
+
+            href="https://maps.app.goo.gl/vzxnBYWuFg4b3Zq89?g_st=aw">
+
+            Cómo llegar
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== -->
+<!-- DRESS CODE -->
+<!-- ===================== -->
+
+<section id="dress">
+
+    <h2 class="titulo">
+
         Código de Vestimenta
+
     </h2>
 
     <div class="dress-card">
 
-        <div class="icono">
-            👗
-        </div>
+        <h3>
 
-        <h3>Formal • Gala • Elegante</h3>
+            Formal · Gala · Elegante
+
+        </h3>
 
         <p>
-            Queremos que esta noche sea inolvidable.
-            Te invitamos a vestir con tu mejor atuendo.
+
+            Queremos compartir contigo una noche inolvidable.
+
+            Acompáñanos con tu mejor atuendo.
+
         </p>
 
     </div>
 
 </section>
-<h2 class="titulo-seccion">
-Nuestro Itinerario
-</h2>
 
-<div class="timeline">
+<!-- ===================== -->
+<!-- GALERÍA -->
+<!-- ===================== -->
 
-<div class="evento">
+<section id="galeria">
 
-<div class="hora">
-18:00
-</div>
+    <h2 class="titulo">
 
-<div class="contenido">
+        Galería
 
-<h3>⛪ Eucaristía</h3>
+    </h2>
 
-<p>Parroquia San José de Guateque</p>
+    <div class="gallery">
 
-<a
-href="https://maps.app.goo.gl/ttdKFH2rWQof25Qk7?g_st=aw"
-target="_blank"
-class="btn-mapa">
+        <div class="photo">
 
-Cómo llegar
+            Próximamente Foto 1
 
-</a>
+        </div>
 
-</div>
+        <div class="photo">
 
-</div>
+            Próximamente Foto 2
 
-<div class="linea-tiempo"></div>
+        </div>
 
-<div class="evento">
+        <div class="photo">
 
-<div class="hora">
-19:00
-</div>
+            Próximamente Foto 3
 
-<div class="contenido">
+        </div>
 
-<h3>🎉 Recepción</h3>
-
-<p>Finca Villa Zue de los Sauces</p>
-
-<a
-href="https://maps.app.goo.gl/vzxnBYWuFg4b3Zq89?g_st=aw"
-target="_blank"
-class="btn-mapa">
-
-Cómo llegar
-
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
+
+<!-- ===================== -->
+<!-- CONFIRMACIÓN -->
+<!-- ===================== -->
+
+<section id="confirmacion">
+
+    <h2 class="titulo">
+
+        Confirma tu asistencia
+
+    </h2>
+
+    <p>
+
+        Será un honor contar con tu presencia.
+
+    </p>
+
+    <a
+
+    class="btn"
+
+    href="#">
+
+    Confirmar asistencia
+
+    </a>
+
+</section>
+
+<!-- ===================== -->
+<!-- FINAL -->
+<!-- ===================== -->
+
+<footer>
+
+    <h2>
+
+        Gracias
+
+    </h2>
+
+    <p>
+
+        Tu presencia hará este día aún más inolvidable.
+
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
