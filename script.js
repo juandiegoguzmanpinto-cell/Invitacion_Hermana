@@ -1,17 +1,115 @@
-const c=document.getElementById("cover");
-document.getElementById("openBtn").onclick=()=>{c.style.display="none";};
-const target=new Date("2026-08-29T18:00:00").getTime();
-function tick(){
-const now=Date.now(),d=target-now;
-if(d<0){document.getElementById("countdown").innerHTML="<h3>¡Llegó el gran día!</h3>";return;}
-const days=Math.floor(d/86400000);
-const hrs=Math.floor(d%86400000/3600000);
-const min=Math.floor(d%3600000/60000);
-const sec=Math.floor(d%60000/1000);
-document.getElementById("countdown").innerHTML=
-`<div><h2>${days}</h2><small>Días</small></div>
-<div><h2>${hrs}</h2><small>Horas</small></div>
-<div><h2>${min}</h2><small>Min</small></div>
-<div><h2>${sec}</h2><small>Seg</small></div>`;
+/*=========================================
+  XV MARÍA ALEJANDRA - SCRIPT
+=========================================*/
+
+// ----------------------------
+// SOBRE
+// ----------------------------
+
+const cover = document.getElementById("cover");
+const openBtn = document.getElementById("openBtn");
+
+openBtn.addEventListener("click", () => {
+
+    cover.style.opacity = "0";
+
+    cover.style.pointerEvents = "none";
+
+    setTimeout(() => {
+
+        cover.style.display = "none";
+
+    },1000);
+
+    // Música (si existe el archivo)
+    const musica = document.getElementById("musica");
+
+    if(musica){
+
+        musica.play().catch(()=>{});
+
+    }
+
+});
+
+// ----------------------------
+// CONTADOR
+// ----------------------------
+
+const fechaEvento = new Date("2026-08-29T18:00:00").getTime();
+
+const contador = document.getElementById("countdown");
+
+function actualizarContador(){
+
+    const ahora = new Date().getTime();
+
+    const diferencia = fechaEvento - ahora;
+
+    if(diferencia <= 0){
+
+        contador.innerHTML="<h2>¡Hoy es el gran día! 🎉</h2>";
+
+        return;
+
+    }
+
+    const dias=Math.floor(diferencia/(1000*60*60*24));
+
+    const horas=Math.floor((diferencia%(1000*60*60*24))/(1000*60*60));
+
+    const minutos=Math.floor((diferencia%(1000*60*60))/(1000*60));
+
+    const segundos=Math.floor((diferencia%(1000*60))/1000);
+
+    contador.innerHTML=`
+
+        <div>
+
+            ${dias}
+
+            <small>Días</small>
+
+        </div>
+
+        <div>
+
+            ${horas}
+
+            <small>Horas</small>
+
+        </div>
+
+        <div>
+
+            ${minutos}
+
+            <small>Minutos</small>
+
+        </div>
+
+        <div>
+
+            ${segundos}
+
+            <small>Segundos</small>
+
+        </div>
+
+    `;
+
 }
-tick();setInterval(tick,1000);
+
+actualizarContador();
+
+setInterval(actualizarContador,1000);
+
+// ----------------------------
+// ANIMACIÓN AL HACER SCROLL
+// ----------------------------
+
+const elementos=document.querySelectorAll("section");
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
