@@ -1,32 +1,40 @@
-/*=========================================
-      XV MARÍA ALEJANDRA
-=========================================*/
+/*==================================================
+        INVITACIÓN XV
+==================================================*/
 
-//=============================
+//====================================
 // ELEMENTOS
-//=============================
+//====================================
 
 const cover = document.getElementById("cover");
+const flap = document.querySelector(".flap");
 const openBtn = document.getElementById("openBtn");
 const musica = document.getElementById("musica");
+const countdown = document.getElementById("countdown");
+const scrollTop = document.getElementById("scrollTop");
+const musicButton = document.getElementById("musicButton");
 
-//=============================
+//====================================
 // ABRIR INVITACIÓN
-//=============================
+//====================================
 
 openBtn.addEventListener("click", abrirInvitacion);
 
 function abrirInvitacion(){
 
-    cover.style.opacity="0";
-
-    cover.style.transform="scale(1.15)";
+    flap.style.transform="rotateX(180deg)";
 
     setTimeout(()=>{
 
-        cover.style.display="none";
+        cover.style.opacity="0";
 
-    },900);
+        setTimeout(()=>{
+
+            cover.style.display="none";
+
+        },900);
+
+    },700);
 
     if(musica){
 
@@ -38,67 +46,65 @@ function abrirInvitacion(){
 
 }
 
-//=============================
+//====================================
 // CUENTA REGRESIVA
-//=============================
+//====================================
 
-const fecha=new Date("2026-08-29T18:00:00").getTime();
-
-const countdown=document.getElementById("countdown");
+const fechaEvento=new Date("2026-08-29T18:00:00").getTime();
 
 function actualizarContador(){
 
 const ahora=new Date().getTime();
 
-const distancia=fecha-ahora;
+const diferencia=fechaEvento-ahora;
 
-if(distancia<=0){
+if(diferencia<=0){
 
-countdown.innerHTML="<h2>¡Llegó el gran día!</h2>";
+countdown.innerHTML="<h2>¡Hoy es el gran día!</h2>";
 
 return;
 
 }
 
-const dias=Math.floor(distancia/86400000);
+const dias=Math.floor(diferencia/86400000);
 
-const horas=Math.floor((distancia%86400000)/3600000);
+const horas=Math.floor((diferencia%86400000)/3600000);
 
-const minutos=Math.floor((distancia%3600000)/60000);
+const minutos=Math.floor((diferencia%3600000)/60000);
 
-const segundos=Math.floor((distancia%60000)/1000);
+const segundos=Math.floor((diferencia%60000)/1000);
 
 countdown.innerHTML=`
 
-<div>
+<div class="item">
 
 <h2>${dias}</h2>
 
-<small>Días</small>
+<span>Días</span>
 
 </div>
 
-<div>
+<div class="item">
 
 <h2>${horas}</h2>
 
-<small>Horas</small>
+<span>Horas</span>
 
 </div>
 
-<div>
+<div class="item">
 
 <h2>${minutos}</h2>
 
-<small>Minutos</small>
+<span>Minutos</span>
 
 </div>
 
-<div>
+<div class="item">
 
 <h2>${segundos}</h2>
 
-<small>Segundos</small>
+<span>Segundos</span>
 
 </div>
 
@@ -107,11 +113,9 @@ countdown.innerHTML=`
 }
 
 actualizarContador();
-
-setInterval(actualizarContador,1000);
-//=========================================
-// ANIMACIÓN AL HACER SCROLL
-//=========================================
+/*==================================================
+        SCROLL ANIMATIONS
+==================================================*/
 
 const observer = new IntersectionObserver((entries)=>{
 
@@ -129,29 +133,21 @@ entry.target.classList.add("visible");
 threshold:.20
 });
 
-document.querySelectorAll("section").forEach(sec=>{
+document.querySelectorAll("section").forEach(section=>{
 
-sec.classList.add("hidden");
+section.classList.add("hidden");
 
-observer.observe(sec);
+observer.observe(section);
 
 });
 
-//=========================================
-// BOTÓN FLOTANTE DE MÚSICA
-//=========================================
+/*==================================================
+        BOTÓN DE MÚSICA
+==================================================*/
 
-const boton=document.createElement("button");
+let reproduciendo=false;
 
-boton.id="musicButton";
-
-boton.innerHTML="🎵";
-
-document.body.appendChild(boton);
-
-let reproduciendo=true;
-
-boton.addEventListener("click",()=>{
+musicButton.addEventListener("click",()=>{
 
 if(!musica)return;
 
@@ -159,13 +155,13 @@ if(reproduciendo){
 
 musica.pause();
 
-boton.innerHTML="🔇";
+musicButton.innerHTML="♪";
 
 }else{
 
 musica.play();
 
-boton.innerHTML="🎵";
+musicButton.innerHTML="❚❚";
 
 }
 
@@ -173,37 +169,39 @@ reproduciendo=!reproduciendo;
 
 });
 
-//=========================================
-// DESTELLOS DORADOS
-//=========================================
+/*==================================================
+        BOTÓN SUBIR
+==================================================*/
 
-function crearDestello(){
+window.addEventListener("scroll",()=>{
 
-const estrella=document.createElement("div");
+if(window.scrollY>500){
 
-estrella.className="estrella";
+scrollTop.classList.add("show");
 
-estrella.style.left=Math.random()*100+"vw";
+}else{
 
-estrella.style.animationDuration=(6+Math.random()*5)+"s";
-
-estrella.style.opacity=Math.random();
-
-document.body.appendChild(estrella);
-
-setTimeout(()=>{
-
-estrella.remove();
-
-},11000);
+scrollTop.classList.remove("show");
 
 }
 
-setInterval(crearDestello,900);
+});
 
-//=========================================
-// PÉTALOS
-//=========================================
+scrollTop.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+/*==================================================
+        PÉTALOS
+==================================================*/
 
 function crearPetalo(){
 
@@ -211,144 +209,5 @@ const petalo=document.createElement("div");
 
 petalo.className="petalo";
 
-petalo.innerHTML="🌸";
-
-petalo.style.left=Math.random()*100+"vw";
-
-petalo.style.fontSize=(18+Math.random()*12)+"px";
-
-petalo.style.animationDuration=(10+Math.random()*8)+"s";
-
-document.body.appendChild(petalo);
-
-setTimeout(()=>{
-
-petalo.remove();
-
-},18000);
-
-}
-
-setInterval(crearPetalo,1200);
-
-//=========================================
-// ESTILOS DINÁMICOS
-//=========================================
-
-const estilos=document.createElement("style");
-
-estilos.innerHTML=`
-
-#musicButton{
-
-position:fixed;
-
-right:20px;
-
-bottom:20px;
-
-width:60px;
-
-height:60px;
-
-border:none;
-
-border-radius:50%;
-
-font-size:24px;
-
-cursor:pointer;
-
-background:#cfa74c;
-
-color:white;
-
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-
-z-index:999;
-
-transition:.3s;
-
-}
-
-#musicButton:hover{
-
-transform:scale(1.1);
-
-}
-
-.estrella{
-
-position:fixed;
-
-top:-30px;
-
-width:6px;
-
-height:6px;
-
-background:#ffd86a;
-
-border-radius:50%;
-
-box-shadow:0 0 15px #ffd86a;
-
-pointer-events:none;
-
-animation:caerEstrella linear forwards;
-
-z-index:1;
-
-}
-
-.petalo{
-
-position:fixed;
-
-top:-40px;
-
-pointer-events:none;
-
-animation:caerPetalo linear forwards;
-
-z-index:2;
-
-}
-
-@keyframes caerPetalo{
-
-0%{
-
-transform:translateY(-50px) rotate(0deg);
-
-}
-
-100%{
-
-transform:translateY(120vh) rotate(360deg);
-
-}
-
-}
-
-@keyframes caerEstrella{
-
-0%{
-
-transform:translateY(-50px);
-
-}
-
-100%{
-
-transform:translateY(120vh);
-
-}
-
-}
-
-`;
-
-document.head.appendChild(estilos);
-
-console.log("Invitación cargada correctamente.");
+petalo.innerHTML="❀
+setInterval(actualizarContador,1000);
