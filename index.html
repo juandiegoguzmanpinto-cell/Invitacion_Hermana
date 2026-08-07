@@ -21,51 +21,61 @@
 
 <body>
 
+<!-- =========================
+     MÚSICA
+========================= -->
+
 <audio id="musica" loop>
 
 <source src="assets/audio/turning-page.mp3" type="audio/mpeg">
 
 </audio>
 
-<!--=============================
-      SOBRE
-==============================-->
+<!-- =========================
+     SOBRE
+========================= -->
 
 <div id="cover">
 
     <div class="envelope">
 
-        <div class="seal">
+        <div class="flap"></div>
 
-            ✿
+        <div class="letter">
+
+            <div class="sello">
+
+                ✿
+
+            </div>
+
+            <h2>
+
+                Has recibido una invitación
+
+            </h2>
+
+            <p>
+
+                Con mucha ilusión quiero compartir contigo uno de los días más importantes de mi vida.
+
+            </p>
+
+            <button id="openBtn">
+
+                Abrir Invitación
+
+            </button>
 
         </div>
-
-        <h2>
-
-            Has recibido una invitación
-
-        </h2>
-
-        <p>
-
-            Con inmensa alegría quiero compartir contigo uno de los días más importantes de mi vida.
-
-        </p>
-
-        <button id="openBtn">
-
-            Abrir invitación
-
-        </button>
 
     </div>
 
 </div>
 
-<!--=============================
-      PORTADA
-==============================-->
+<!-- =========================
+     PORTADA
+========================= -->
 
 <header class="hero">
 
@@ -91,17 +101,17 @@ Guzmán Pinto
 
 </h1>
 
-<p class="fecha">
+<h3>
 
 29 de Agosto de 2026
 
-</p>
+</h3>
 
-<div class="linea"></div>
+<div class="divider"></div>
 
-<p class="frase">
+<p class="hero-text">
 
-Hay momentos que se sueñan toda la vida…
+Hay momentos que se sueñan toda la vida.
 
 <br><br>
 
@@ -109,7 +119,7 @@ Hoy ese sueño comienza a hacerse realidad con la bendición de Dios.
 
 <br><br>
 
-Tu presencia hará este día aún más inolvidable.
+Tu presencia hará este día aún más especial.
 
 </p>
 
@@ -123,15 +133,15 @@ Descubrir
 
 </header>
 
-<!--=============================
-      CONTADOR
-==============================-->
+<!-- =========================
+     CONTADOR
+========================= -->
 
 <section id="contador">
 
 <h2 class="titulo">
 
-Faltan...
+Cuenta Regresiva
 
 </h2>
 
@@ -141,9 +151,9 @@ Faltan...
 
 </section>
 
-<!--=============================
-      ITINERARIO
-==============================-->
+<!-- =========================
+     ITINERARIO
+========================= -->
 
 <section id="itinerario">
 
@@ -153,6 +163,8 @@ Nuestro Itinerario
 
 </h2>
 
+<div class="timeline">
+
 <div class="evento">
 
 <div class="hora">
@@ -161,11 +173,11 @@ Nuestro Itinerario
 
 </div>
 
-<div class="card">
+<div class="contenido">
 
 <h3>
 
-⛪ Eucaristía
+Eucaristía
 
 </h3>
 
@@ -179,114 +191,116 @@ Parroquia San José de Guateque
 
 Carrera 6 #10-48
 
-Guateque, Boyacá
-
 </p>
 
-<a class="btn"
+<a
+
+class="btn"
 
 target="_blank"
 
 href="https://maps.app.goo.gl/ttdKFH2rWQof25Qk7?g_st=aw">
 
-Ver ubicación
+Cómo llegar
 
 </a>
 
 </div>
 
 </div>
+        <div class="evento">
 
-<div class="linea-tiempo"></div>
+            <div class="hora">
 
-<div class="evento">
+                19:00
 
-<div class="hora">
+            </div>
 
-19:00
+            <div class="contenido">
 
-</div>
+                <h3>
 
-<div class="card">
+                    Recepción
 
-<h3>
+                </h3>
 
-🎉 Recepción
+                <p>
 
-</h3>
+                    Finca Villa Zue de los Sauces
 
-<p>
+                </p>
 
-Finca Villa Zue de los Sauces
+                <p>
 
-</p>
+                    Vereda Rosales, Guateque
 
-<p>
+                </p>
 
-Km 1 vía Rosales
+                <a
 
-Vereda Rosales
+                class="btn"
 
-</p>
+                target="_blank"
 
-<a class="btn"
+                href="https://maps.app.goo.gl/vzxnBYWuFg4b3Zq89?g_st=aw">
 
-target="_blank"
+                Cómo llegar
 
-href="https://maps.app.goo.gl/vzxnBYWuFg4b3Zq89?g_st=aw">
+                </a>
 
-Ver ubicación
+            </div>
 
-</a>
+        </div>
 
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!--=============================
-      DRESS CODE
-==============================-->
+<!-- =========================
+     CÓDIGO DE VESTIMENTA
+========================= -->
 
 <section id="dress">
 
-<h2 class="titulo">
+    <h2 class="titulo">
 
-Código de Vestimenta
+        Código de Vestimenta
 
-</h2>
+    </h2>
 
-<div class="dress-card">
+    <div class="dress-card">
 
-<h3>
+        <div class="dress-icon">
 
-Formal · Gala · Elegante
+            👗
 
-</h3>
+        </div>
 
-<p>
+        <h3>
 
-Tu presencia es el mejor regalo.
+            Formal · Gala · Elegante
 
-Si deseas acompañarme, te invito a vestir con un atuendo elegante para esta ocasión tan especial.
+        </h3>
 
-</p>
+        <p>
 
-</div>
+            Queremos compartir contigo una noche inolvidable.
+
+            Acompáñanos con tu mejor atuendo para celebrar este momento tan especial.
+
+        </p>
+
+    </div>
 
 </section>
 
-<!-- ===== CONTINÚA EN LA PARTE 2 ===== -->
-<!--=============================
-      MENSAJE ESPECIAL
-==============================-->
+<!-- =========================
+     MENSAJE
+========================= -->
 
 <section id="mensaje">
 
     <div class="mensaje-card">
-
-        <span class="icono">❀</span>
 
         <h2 class="titulo">
 
@@ -296,69 +310,22 @@ Si deseas acompañarme, te invito a vestir con un atuendo elegante para esta oca
 
         <p>
 
-            Hoy doy un paso muy importante en mi vida y quiero compartir esta alegría con las personas que han sido parte de mi historia.
+            Hay momentos que permanecen para siempre en el corazón.
 
         </p>
 
         <p>
 
-            Gracias por acompañarme, por tu cariño y por hacer parte de este momento tan especial.
+            Hoy comienza uno de los días más importantes de mi vida y deseo compartir esta
+<!-- =========================
+     FRASE FINAL
+========================= -->
 
-        </p>
+<section id="frase-final">
 
-        <h3>
+    <div class="frase-card">
 
-            ¡Te espero!
-
-        </h3>
-
-    </div>
-
-</section>
-
-<!--=============================
-      CONFIRMACIÓN
-==============================-->
-
-<section id="confirmacion">
-
-    <h2 class="titulo">
-
-        Confirma tu asistencia
-
-    </h2>
-
-    <p class="confirmacion-texto">
-
-        Agradecemos confirmar tu asistencia antes del
-
-        <strong>25 de agosto de 2026</strong>
-
-    </p>
-
-    <a
-
-        href="AQUI_VA_EL_LINK_DE_GOOGLE_FORMS"
-
-        target="_blank"
-
-        class="btn">
-
-        Confirmar asistencia
-
-    </a>
-
-</section>
-
-<!--=============================
-      FRASE FINAL
-==============================-->
-
-<section id="despedida">
-
-    <div class="despedida-card">
-
-        <p>
+        <p class="frase">
 
             "Todo tiene su tiempo,
 
@@ -376,37 +343,75 @@ Si deseas acompañarme, te invito a vestir con un atuendo elegante para esta oca
 
 </section>
 
-<!--=============================
-      FOOTER
-==============================-->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    <h2>
+    <div class="footer-contenido">
 
-        María Alejandra Guzmán Pinto
+        <h2>
 
-    </h2>
+            María Alejandra Guzmán Pinto
 
-    <p>
+        </h2>
 
-        Mis XV Años
+        <p>
 
-    </p>
+            Mis XV Años
 
-    <p>
+        </p>
 
-        29 de Agosto de 2026
+        <p>
 
-    </p>
+            29 de Agosto de 2026
 
-    <p>
+        </p>
 
-        Gracias por hacer parte de este día tan especial.
+        <div class="footer-linea"></div>
 
-    </p>
+        <p class="gracias">
+
+            Gracias por acompañarme en uno de los días más importantes de mi vida.
+
+        </p>
+
+    </div>
 
 </footer>
+
+<!-- =========================
+     BOTÓN MÚSICA
+========================= -->
+
+<button id="musicButton">
+
+    ♪
+
+</button>
+
+<!-- =========================
+     BOTÓN SUBIR
+========================= -->
+
+<button id="scrollTop">
+
+    ↑
+
+</button>
+
+<!-- =========================
+     EFECTOS
+========================= -->
+
+<div id="petalos"></div>
+
+<div id="destellos"></div>
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script src="script.js"></script>
 
