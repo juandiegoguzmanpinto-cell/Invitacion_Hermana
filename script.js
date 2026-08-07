@@ -1,14 +1,14 @@
-const fechaEvento = new Date("August 29, 2026 18:00:00").getTime();
+const fecha = new Date("August 29, 2026 18:00:00").getTime();
 
-setInterval(() => {
+setInterval(function(){
 
-    const ahora = new Date().getTime();
+const ahora = new Date().getTime();
 
-    const diferencia = fechaEvento - ahora;
+const diferencia = fecha - ahora;
 
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+const dias = Math.floor(diferencia/(1000*60*60*24));
 
-    document.getElementById("countdown").innerHTML =
-    dias + " días";
+document.getElementById("contador").innerHTML =
+dias + " días";
 
 },1000);
