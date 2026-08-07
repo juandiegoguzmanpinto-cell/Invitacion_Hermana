@@ -1,1 +1,219 @@
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(180deg,#faf7f2,#f8e9ef);
+    color:#2d2d2d;
+}
+
+/* ===========================
+   PORTADA
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:
+    radial-gradient(circle at top,#ffffffaa,transparent),
+    linear-gradient(180deg,#faf7f2,#f6d8e5);
+
+}
+
+.hero-contenido{
+
+    max-width:700px;
+
+    animation:aparecer 1.5s;
+
+}
+
+.detalle{
+
+    color:#c9a45c;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:18px;
+
+}
+
+h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:70px;
+
+    margin-top:20px;
+
+}
+
+h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+.linea{
+
+    width:120px;
+
+    height:2px;
+
+    background:#c9a45c;
+
+    margin:25px auto;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+.boton{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    background:#c9a45c;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 40px;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.boton:hover{
+
+    transform:scale(1.05);
+
+    background:#b78d3d;
+
+}
+
+/* ===========================
+   CONTADOR
+=========================== */
+
+#contador{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+}
+
+#countdown{
+
+    margin-top:20px;
+
+    font-size:40px;
+
+    color:#c9a45c;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   PRÓXIMAMENTE
+=========================== */
+
+.proximamente{
+
+    padding:100px 30px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   ANIMACIÓN
+=========================== */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+h1{
+
+font-size:48px;
+
+}
+
+h2{
+
+font-size:30px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+}
