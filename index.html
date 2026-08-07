@@ -1,64 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV | María Alejandra Guzmán Pinto</title>
 
-<title>XV Años | María Alejandra Guzmán Pinto</title>
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<section class="hero">
+<!-- SOBRE -->
+<section id="cover">
 
-<div class="fondo"></div>
+    <div class="envelope">
 
-<div class="contenido">
+        <div class="seal">💮</div>
 
-<p class="detalle">
-Mis XV Años
-</p>
+        <h2>Has recibido una invitación</h2>
 
-<h1>
-María Alejandra
-</h1>
+        <button id="openBtn">
+            Abrir invitación
+        </button>
 
-<h2>
-Guzmán Pinto
-</h2>
+    </div>
 
-<p class="frase">
-Hay momentos que se sueñan toda la vida...
-<br><br>
-Hoy ese sueño comienza a hacerse realidad con la bendición de Dios.
-<br><br>
-Tu presencia hará este día aún más inolvidable.
-</p>
+</section>
 
-<a href="#evento" class="boton">
-Descubrir invitación
-</a>
+<!-- INVITACIÓN -->
+<main id="invitacion">
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <span class="subtitle">
+            Mis XV Años
+        </span>
+
+        <h1>
+            María Alejandra
+        </h1>
+
+        <h2>
+            Guzmán Pinto
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+
+            Hay momentos que se sueñan toda la vida...
+
+            <br><br>
+
+            Hoy ese sueño comienza a hacerse realidad con la bendición de Dios.
+
+            <br><br>
+
+            Tu presencia hará este día aún más inolvidable.
+
+        </p>
+
+        <a href="#contador" class="btn">
+
+            Descubrir Invitación
+
+        </a>
+
+    </div>
+
+</header>
+
+<section id="contador">
+
+<h2>Cuenta regresiva</h2>
+
+<div id="countdown">
+
+00 Días
 
 </div>
 
 </section>
 
-<section id="evento">
+<section id="itinerario">
 
-<h2>Faltan</h2>
+<h2>Itinerario</h2>
 
-<div id="contador"></div>
+<div class="card">
+
+<h3>⛪ Eucaristía</h3>
+
+<p>18:00</p>
+
+<p>Parroquia San José de Guateque</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎉 Recepción</h3>
+
+<p>19:00</p>
+
+<p>Finca Villa Zue de los Sauces</p>
+
+</div>
 
 </section>
+
+</main>
 
 <script src="script.js"></script>
 
