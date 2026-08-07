@@ -155,65 +155,421 @@ body{
 
 .hero{
 
-position:relative;
+    position:relative;
 
-height:100vh;
+    width:100%;
 
-display:flex;
+    height:100vh;
 
-justify-content:center;
-
-align-items:center;
-
-overflow:hidden;
-
-background:black;
+    overflow:hidden;
 
 }
 
 .hero-image{
 
-position:absolute;
+    position:absolute;
 
-width:100%;
+    width:100%;
 
-height:100%;
+    height:100%;
 
-object-fit:cover;
-
-animation:zoomHero 18s linear infinite alternate;
+    object-fit:cover;
 
 }
 
 .overlay{
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
-background:linear-gradient(
+    background:linear-gradient(
 
-rgba(0,0,0,.18),
+    rgba(0,0,0,.15),
 
-rgba(0,0,0,.58)
+    rgba(0,0,0,.45)
 
-);
-
-backdrop-filter:blur(2px);
+    );
 
 }
 
-@keyframes zoomHero{
+.hero-content{
 
-from{
+    position:relative;
 
-transform:scale(1);
+    z-index:5;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:25px;
 
 }
 
-to{
+.subtitle{
 
-transform:scale(1.08);
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+    font-size:20px;
+
+}
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:72px;
+
+    margin:15px 0;
+
+    text-shadow:0 10px 20px rgba(0,0,0,.3);
+
+}
+
+.fecha{
+
+    font-size:24px;
+
+}
+
+.line{
+
+    width:120px;
+
+    height:2px;
+
+    background:white;
+
+    margin:30px auto;
+
+}
+
+.frase{
+
+    max-width:650px;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+/* =====================================
+   BOTONES
+===================================== */
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    background:var(--gold);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 40px;
+
+    border-radius:40px;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    background:var(--gold2);
+
+    transform:translateY(-4px);
+
+}
+
+/* =====================================
+   SECCIONES
+===================================== */
+
+section{
+
+    padding:100px 25px;
+
+}
+
+.titulo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:52px;
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+/* =====================================
+   CONTADOR
+===================================== */
+
+#countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+#countdown div{
+
+    width:120px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    font-size:36px;
+
+    color:var(--gold);
+
+    font-weight:bold;
+
+}
+
+#countdown small{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:#666;
+
+}
+
+/* =====================================
+   ITINERARIO
+===================================== */
+
+.evento{
+
+    display:flex;
+
+    gap:25px;
+
+    align-items:center;
+
+    max-width:900px;
+
+    margin:40px auto;
+
+}
+
+.hora{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.card{
+
+    flex:1;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.linea{
+
+    width:3px;
+
+    height:70px;
+
+    background:var(--gold);
+
+    margin:auto;
+
+}
+
+/* =====================================
+   DRESS
+===================================== */
+
+.dress-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.dress-card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+/* =====================================
+   GALERÍA
+===================================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.photo{
+
+    height:350px;
+
+    border-radius:20px;
+
+    background:#ececec;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#777;
+
+    font-size:22px;
+
+}
+
+/* =====================================
+   CONFIRMACIÓN
+===================================== */
+
+#confirmacion{
+
+    text-align:center;
+
+}
+
+footer{
+
+    padding:70px;
+
+    text-align:center;
+
+    background:#f2edf0;
+
+}
+
+/* =====================================
+   ANIMACIONES
+===================================== */
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-12px);}
+
+100%{transform:translateY(0);}
+
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero .frase{
+
+font-size:17px;
+
+}
+
+.evento{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+#countdown div{
+
+width:90px;
+
+font-size:28px;
 
 }
 
