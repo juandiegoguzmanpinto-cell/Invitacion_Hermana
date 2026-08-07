@@ -1,12 +1,252 @@
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#faf7f2;color:#333}
-#cover{position:fixed;inset:0;background:#f7dce8;display:flex;justify-content:center;align-items:center}
-.card{background:#fff;padding:40px;border-radius:20px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.15)}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:30px;background:linear-gradient(#faf7f2,#f7dce8)}
-.hero h1{font-size:3rem;margin:10px 0}
-.hero h2{color:#b38b43}
-.hero p{max-width:700px;line-height:1.8}
-.btn,button{display:inline-block;background:#c7a44f;color:#fff;text-decoration:none;border:none;padding:14px 30px;border-radius:30px;margin-top:20px;cursor:pointer}
-section{padding:80px 20px;text-align:center}
-#countdown{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:20px}
-#countdown div{background:#fff;padding:20px;border-radius:15px;min-width:90px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
+/* =====================================
+   RESET
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#faf7f3;
+    color:#2d2d2d;
+    overflow-x:hidden;
+
+}
+
+/* =====================================
+   VARIABLES
+===================================== */
+
+:root{
+
+    --gold:#d4af37;
+    --gold2:#b88c1d;
+    --pink:#f6dce6;
+    --cream:#faf7f3;
+    --white:#ffffff;
+
+}
+
+/* =====================================
+   SOBRE
+===================================== */
+
+#cover{
+
+    position:fixed;
+
+    inset:0;
+
+    background:linear-gradient(135deg,#fff,#f9dce8);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    transition:1s;
+
+}
+
+.envelope{
+
+    width:340px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+.seal{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:36px;
+
+    margin-bottom:25px;
+
+}
+
+.envelope h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+.envelope p{
+
+    color:#777;
+
+    margin-bottom:30px;
+
+}
+
+#openBtn{
+
+    border:none;
+
+    background:var(--gold);
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:35px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+#openBtn:hover{
+
+    background:var(--gold2);
+
+    transform:scale(1.05);
+
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+.hero-image{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+    rgba(0,0,0,.15),
+
+    rgba(0,0,0,.45)
+
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:25px;
+
+}
+
+.subtitle{
+
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+    font-size:20px;
+
+}
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:72px;
+
+    margin:15px 0;
+
+    text-shadow:0 10px 20px rgba(0,0,0,.3);
+
+}
+
+.fecha{
+
+    font-size:24px;
+
+}
+
+.line{
+
+    width:120px;
+
+    height:2
