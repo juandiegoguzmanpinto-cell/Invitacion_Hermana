@@ -1,2 +1,6 @@
-# Invitacion_Hermana
-Invitación interactiva para los xv años de alejandra
+Proyecto base de invitación XV.
+Pendiente:
+- Agregar música
+- Carrusel
+- Google Forms
+- Fotos
