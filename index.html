@@ -1,467 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mis XV | María Alejandra Guzmán Pinto</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis XV | María Alejandra Guzmán Pinto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div id="petals"></div>
+  <div class="page-frame"></div>
 
-<audio id="musica" loop>
-    <source src="Assets/>Music/musica.mp3" type="audio/mpeg">
-</audio>
-
-<!-- ===========================
-        SOBRE
-============================ -->
-
-<section id="cover">
-
-    <div class="envelope">
-
-        <div class="envelope-top"></div>
-
-        <div class="letter">
-
-            <div class="seal">
-
-                ✿
-
-            </div>
-
-            <h2>
-
-                Has recibido una invitación
-
-            </h2>
-
-            <p>
-
-                Con inmensa alegría quiero compartir contigo uno de los días más importantes de mi vida.
-
-            </p>
-
-            <button id="openBtn">
-
-                Abrir Invitación
-
-            </button>
-
-        </div>
-
+  <section id="cover" class="cover-screen">
+    <div class="cover-card">
+      <div class="cover-badge">XV</div>
+      <div class="cover-title">Te Invito a Celebrar mis XV Años</div>
+      <p class="cover-text">María Alejandra Guzmán Pinto</p>
+      <button id="openBtn" class="btn cover-btn">Abrir Invitación</button>
+      <div class="cover-note">29 de agosto de 2026 · Eucaristía 18:00 · Recepción 19:00</div>
     </div>
+    <div class="cover-anim"></div>
+  </section>
 
-</section>
-
-<!-- ===========================
-        PORTADA
-============================ -->
-
-<header class="hero">
-
-    <img
-        src="Assets/Img/portada.jpg"
-        alt="María Alejandra"
-        class="hero-image">
-
-    <div class="overlay"></div>
-
+  <header class="hero" id="home">
+    <div class="hero-mask"></div>
     <div class="hero-content">
-
-        <span class="subtitle">
-
-            MIS XV AÑOS
-
-        </span>
-
-        <h1>
-
-            María Alejandra
-
-            <br>
-
-            Guzmán Pinto
-
-        </h1>
-
-        <h3>
-
-            29 de Agosto de 2026
-
-        </h3>
-
-        <div class="divider"></div>
-
-        <p>
-
-            Hay momentos que se sueñan toda la vida.
-
-            <br><br>
-
-            Hoy ese sueño comienza a hacerse realidad con la bendición de Dios.
-
-            <br><br>
-
-            Tu presencia hará este día aún más inolvidable.
-
-        </p>
-
-        <a href="#contador" class="btn">
-
-            Descubrir
-
-        </a>
-
+      <span class="eyebrow">Te invito a celebrar mis XV años</span>
+      <h1 class="shine-title">
+    María Alejandra Guzmán Pinto
+</h1>
+      <p>Un día de Ternura, Brillo y Gratitud. Te Espero para Celebrar este Momento tan Especial Junto a mi Familia</p>
+      <div class="hero-actions">
+        <a href="#contador" class="btn">Ver Cuenta Regresiva</a>
+       <a
+  class="btn"
+  href="https://docs.google.com/forms/d/e/1FAIpQLSeha6dayAo5qdDstFmVEwKooB7Dw2t0Kvt7iAi6K00JA8-xwg/viewform"
+  target="_blank">
+  Confirmar Asistencia
+</a>
+      </div>
     </div>
+  </header>
 
-</header>
+  <main>
+    <section class="section section-soft" id="contador">
+      <div class="section-header">
+        <p class="section-label">Cuenta Regresiva</p>
+        <h2>El Gran Día se Acerca</h2>
+      </div>
+      <div id="countdown" class="countdown-grid"></div>
+    </section>
 
-<!-- ===========================
-        CONTADOR
-============================ -->
+    <section class="section" id="itinerario">
+      <div class="section-header">
+        <p class="section-label">Itinerario</p>
+        <h2>Agenda del Evento</h2>
+      </div>
+      <div class="cards-grid">
+        <article class="event-card">
+          <div class="event-top">
+            <span>18:00</span>
+            <span>Eucaristía</span>
+          </div>
+          <div class="event-body">
+            <p>Parroquia San José de Guateque</p>
+            <p>Carrera 6 #10-48</p>
+            <a class="link-button" href="https://maps.app.goo.gl/ttdKFH2rWQof25Qk7?g_st=aw" target="_blank" rel="noreferrer">Ver ubicación</a>
+          </div>
+        </article>
+        <article class="event-card">
+          <div class="event-top">
+            <span>19:00</span>
+            <span>Recepción</span>
+          </div>
+          <div class="event-body">
+            <p>Finca Villa Zue de los Sauces</p>
+            <p>Km 1 vía Rosales</p>
+            <a class="link-button" href="https://maps.app.goo.gl/vzxnBYWuFg4b3Zq89?g_st=aw" target="_blank" rel="noreferrer">Ver ubicación</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<section id="contador">
-
-    <h2 class="titulo">
-
-        Faltan...
-
-    </h2>
-
-    <div id="countdown"></div>
-
-</section>
-
-<!-- ===========================
-        ITINERARIO
-============================ -->
-
-<section id="itinerario">
-
-    <h2 class="titulo">
-
-        Nuestro Itinerario
-
-    </h2>
-
-    <div class="timeline">
-
-        <div class="evento">
-
-            <div class="hora">
-
-                18:00
-
-            </div>
-
-            <div class="card">
-
-                <h3>
-
-                    Eucaristía
-
-                </h3>
-
-                <p>
-
-                    Parroquia San José de Guateque
-
-                </p>
-
-                <p>
-
-                    Carrera 6 #10-48
-
-                </p>
-
-                <a
-
-                    class="btn"
-
-                    target="_blank"
-
-                    href="https://maps.app.goo.gl/ttdKFH2rWQof25Qk7">
-
-                    Ver ubicación
-
-                </a>
-
-            </div>
-
+    <section class="section section-soft" id="dress">
+      <div class="section-header">
+        <p class="section-label">Código de Vestimenta</p>
+        <h2>Elegante y con brillo</h2>
+      </div>
+      <div class="dress-grid">
+        <div class="dress-card">
+          <h3>Invitadas</h3>
+          <p>Ellas Divinas</p>
         </div>
-        <div class="evento">
-
-            <div class="hora">
-
-                19:00
-
-            </div>
-
-            <div class="card">
-
-                <h3>
-
-                    Recepción
-
-                </h3>
-
-                <p>
-
-                    Finca Villa Zue de los Sauces
-
-                </p>
-
-                <p>
-
-                    Km 1 vía Rosales
-
-                </p>
-
-                <a
-
-                    class="btn"
-
-                    target="_blank"
-
-                    href="https://maps.app.goo.gl/vzxnBYWuFg4b3Zq89">
-
-                    Ver ubicación
-
-                </a>
-
-            </div>
-
+        <div class="dress-card">
+          <h3>Invitados</h3>
+          <p>Ellos Guapos</p>
         </div>
-
-    </div>
-
-</section>
-
-<!-- ===========================
-        VESTIMENTA
-============================ -->
-
-<section id="dress">
-
-    <h2 class="titulo">
-
-        Código de Vestimenta
-
-    </h2>
-
-    <div class="dress-card">
-
-        <h3>
-
-            Formal · Gala · Elegante
-
-        </h3>
-
-        <p>
-
-            Queremos compartir contigo una noche inolvidable.
-
-        </p>
-
-        <p>
-
-            Tu presencia será el mejor regalo; acompáñanos con un atuendo elegante para esta ocasión tan especial.
-
-        </p>
-
-    </div>
-
-</section>
-
-<!-- ===========================
-        MENSAJE
-============================ -->
-
-<section id="mensaje">
-
-    <div class="mensaje-card">
-
-        <h2 class="titulo">
-
-            Con mucho cariño
-
-        </h2>
-
-        <p>
-
-            Hay momentos que permanecen para siempre en el corazón.
-
-        </p>
-
-        <p>
-
-            Hoy comienza uno de los días más importantes de mi vida y deseo compartir esta alegría contigo.
-
-        </p>
-
-        <p>
-
-            Gracias por acompañarme y hacer parte de este hermoso sueño.
-
-        </p>
-
-        <h3>
-
-            ¡Te espero!
-
-        </h3>
-
-    </div>
-
-</section>
-
-<!-- ===========================
-        CONFIRMACIÓN
-============================ -->
-
-<section id="confirmacion">
-
-    <h2 class="titulo">
-
-        Confirma tu asistencia
-
-    </h2>
-
-    <p class="confirmacion-texto">
-
-        Agradecemos confirmar tu asistencia antes del
-
-        <strong>25 de agosto de 2026.</strong>
-
-    </p>
-
-    <a
-
-        href="#"
-
-        class="btn"
-
-        id="btnConfirmar"
-
-        target="_blank">
-
-        Confirmar asistencia
-
-    </a>
-
-</section>
-<!-- ===========================
-        FRASE FINAL
-============================ -->
-
-<section id="frase-final">
-
-    <div class="frase-card">
-
-        <p class="frase">
-
-            "Todo tiene su tiempo,
-
-            y todo lo que se quiere debajo del cielo tiene su hora."
-
-        </p>
-
-        <span>
-
-            Eclesiastés 3:1
-
-        </span>
-
-    </div>
-
-</section>
-
-<!-- ===========================
-        FOOTER
-============================ -->
-
-<footer>
-
-    <div class="footer-content">
-
-        <h2>
-
-            María Alejandra Guzmán Pinto
-
-        </h2>
-
-        <p>
-
-            Mis XV Años
-
-        </p>
-
-        <p>
-
-            29 de Agosto de 2026
-
-        </p>
-
-        <div class="footer-line"></div>
-
-        <p class="footer-text">
-
-            Gracias por acompañarme en uno de los momentos más importantes de mi vida.
-
-        </p>
-
-    </div>
-
-</footer>
-
-<!-- ===========================
-        BOTÓN MÚSICA
-============================ -->
-
-<button id="musicButton" aria-label="Reproducir música">
-
-    ♪
-
+      </div>
+    </section>
+
+    <section class="section" id="confirmacion">
+      <div class="section-header">
+        <p class="section-label">Confirmación</p>
+        <h2>Confirma tu Asistencia</h2>
+      </div>
+      <div class="confirm-card">
+        <p>Es muy Importante Contar con tu Presencia. Cualquier Duda o Consulta por WhatsApp con Gusto te Responderemos.</p>
+        <a class="btn whatsapp-btn" href="https://wa.me/573123687915" target="_blank" rel="noreferrer">Enviar Mensaje</a>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="musica-section">
+      <div class="section-header">
+        <p class="section-label">Música</p>
+        <h2>Sutil Ambiente Sonoro</h2>
+      </div>
+      <div class="music-panel">
+        <p>Activa la Música Mientras Recorres la Invitación. Si Prefieres, Pausa en Cualquier Momento.</p>
+        <button id="musicButton" class="music-floating" aria-label="Controlar música">
+    <span id="musicIcon">♪</span>
 </button>
+      </div>
+    </section>
+  </main>
 
-<!-- ===========================
-        BOTÓN SUBIR
-============================ -->
+  <footer class="footer">
+    <p>María Alejandra Guzmán Pinto · 29 de agosto de 2026</p>
+  </footer>
 
-<button id="scrollTop" aria-label="Volver arriba">
-
-    ↑
-
+  <audio id="musica" loop>
+    <source src="Assets/Music/musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+<button id="shareBtn" class="share-floating">
+    📱
 </button>
-
-<!-- ===========================
-        CONTENEDORES EFECTOS
-============================ -->
-
-<div id="petalos"></div>
-
-<div id="destellos"></div>
-
-<!-- ===========================
-        JAVASCRIPT
-============================ -->
-
-<script src="script.js"></script>
-
+<div id="flash" class="flash"></div>
+  <script src="script.js"></script>
 </body>
-
 </html>
